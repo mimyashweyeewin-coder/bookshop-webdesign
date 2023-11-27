@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Zilla Slab', serif;
+}
+body{
+    background-color:var(--bg-color);
+}
+:root{
+    --bg-color: black;
+    --main-color: rgb(179, 73, 73);
+    --text-color: #fff;
+}
+/* logo and search bar */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header .top_navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding-bottom: 5px;
+    /* position: sticky;
+    top: 0;
+    z-index: 10; */
+}
+header .logo{
+    color: var(--text-color);
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+header .text_search{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.search{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+.text_bx{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+}
+/* navbar */
+.navbar .nav_list{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+    padding: 10px 0px;
+}
+.nav_list li{
+    position: relative;
+}
+.nav_list a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.nav_list a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--bg-color);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.5s;
+}
+.nav_list a:hover::after{
+    width: 100%;
+}
+/* cover photo */
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 630px;
+}
+.container img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.7;
+}
+.cover-text{
+    padding-left: 120px;
+}
+.cover-text span{
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.cover-text h1{
+    color: var(--text-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+/* next button */
+.next-bar{
+    width: 80px;
+    margin: 10px auto 10px auto;
+}
+.next-bar a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+
+.next-bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.next-bar .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+.next-bar .next {
+    background-color: var(--main-color);
+    color: var(--text-color);
+  }
+
+.next-bar .round {
+    border-radius: 50%;
+  }
+/* Book Section */
+.heading{
+    color: var(--main-color);
+    max-width: 968px;
+    margin: 10px auto 10px auto;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
+}
+.book-container{
+    max-width: 968px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,auto));
+    gap: 0.8rem;
+    margin: 0px auto 0px auto;
+    margin-top: 2rem;
+}
+.box .box-img{
+    width: 80%;
+    height: 280px;
+    object-fit: cover;
+}
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.box .box-img img:hover{
+    transform: translateY(-10px);
+}
+.box h3,
+.box span{
+    /* text-align: center; */
+    color: var(--text-color);
+}
+/* Authors */
+.author_container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.author_container .authorbox{
+    margin: 0px 20px;
+    height: 100%;
+}
+.authorbox .author-img{
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    padding-bottom: 20px;
+    padding-top: 8px;
+}
+.authorbox .author-img img{
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.authorbox .name_box{
+    color: var(--text-color);
+    text-align: center;
+}
+.authorbox .name_box a{
+    color: var(--main-color);
+}
+/* Contact Us */
+.contact{
+    max-width: 968px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.contact h2{
+    color: var(--main-color);
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.contact form{
+    background-color: var(--text-color);
+    padding: 10px;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact form .email{
+    background-color: var(--text-color);
+    border: none;
+    outline: none;
+    width: 200px;
+}
+.contact .btn{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+/* footer section */
+.footer{
+    max-width: 968px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer pre{
+    margin-top: 10px;
+    text-align: justify;
+}
+.footer .social{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer .logo{
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.footer .social .logo i{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 3px 3px;
+    border-radius: 50%;
+    border: 4px solid rgba(208, 125, 125, 0.4);
+    transition: 0.5s;
+}
+.footer .social .logo i:hover{
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+.footer iframe{
+    width:350px;
+    height: auto;
+}
+/* Copyright */
+.copyright{
+    margin-top: 100px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+}
+/* For responsive */
+@media (max-width: 960px) {
+   .books .book-container{
+    margin-left: 10px;
+   }
+   .footer{
+    margin: 30px 30px;
+   }
+}
+@media (max-width: 933px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .footer .social{
+        flex-direction: row;
+        padding: 10px auto;
+    }
+    .footer iframe{
+        width:450px;
+        height: 300px;
+    }
+    .author_container .authorbox{
+        margin: 0px 18px;
+    }
+    /* .book-container{
+        margin: 0px auto 0px auto;
+        margin-top: 2rem;
+    } */
+}
+@media (max-width: 670px) {
+    .navbar .nav_list{
+        padding: 5px 5px;
+        column-gap: 3.5rem;
+    }
+    .author_container .authorbox{
+        margin: 0px 8px;
+    }
+    .container .cover-text{
+       padding-left: 30px;
+    }
+    /* .box .box-img{
+        height: 300px;
+    } */
+    .copyright{
+        padding: 10px 15px;
+    }
+}
+@media (max-width: 586px) {
+    .text_search .text_bx{
+        width: 200px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .navbar .nav_list{
+        column-gap: 2rem;
+        padding: 5px 5px;
+    }
+    .authors .author_container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box .box-img{
+        height: 300px;
+    }
+}
+@media (max-width: 465px) {
+    .navbar .nav_list{
+        display: none;
+    }
+    header .logo{
+        padding: 10px 10px;
+    }
+    .text_search .text_bx{
+        width: 120px;
+    }
+    .container .cover-text{
+        padding-left: 20px;
+    }
+    .container h1{
+        font-size: 2rem;
+    }
+    .box .box-img{
+        width: 100%;
+        height: 250px;
+    }
+    .footer .social{
+        margin-left: 20px;
+    }
+    .footer iframe{
+        width:300px;
+        height: 200px;
+    }
+    .footer pre{
+        display: none;
+    }
+    .box .box-img{
+        height: 300px;
+    }
+}
+@media (max-width: 326px) {
+    header .logo{
+        padding: auto 5px;
+    }
+    .container .cover-text{
+        padding-left: 10px;
+     }
+    .text_search .text_bx{
+        width: 90px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .text_search .search{
+        font-size: 1rem;
+        margin-left: 3px;
+    }
+}
